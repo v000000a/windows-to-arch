@@ -33,3 +33,15 @@ It modifies the disk partition table, creates a new boot entry in the Windows Bo
    stage_2.bat
    ```
 4. Reboot, enter boot menu and select "Arch Linux"
+
+Features
+
+   1. Choice of Arch Linux mirror during setup
+   2. Automatic EFI partition detection
+   3. Full Arch Linux installation via pacstrap
+   4. Repurposes the original Windows partition into btrfs
+
+Notes
+
+ 1. If the system fails to boot after reboot, disable Secure Boot in BIOS/UEFI.
+ 2. Recovery of the original Windows installation is not supported after completion.
