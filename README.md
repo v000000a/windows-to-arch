@@ -22,15 +22,15 @@ It modifies the disk partition table, creates a new boot entry in the Windows Bo
 
 1. Compile the program:
    ```cmd
-   g++ deformator.cpp -o deformator.exe
+   g++ stage1.cpp -o stage1.exe
    ```
 2. Run as administrator:
    ```cmd
-   deformator.exe
+   stage1.exe
    ```
 3. After the program finishes, run as administrator:
    ```cmd
-   stage_2.bat
+   stage2.bat
    ```
 4. Reboot, enter boot menu and select "Arch Linux"
 
