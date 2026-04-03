@@ -51,7 +51,7 @@ string selectMirror() {
 }
 
 int main() {
-    cout << "=== Arch Deformator v6.3 ===\n";
+    cout << "=== windows-to-arch ===\n";
     cout << "Experimental Windows to Arch Linux installer\n\n";
 
     if (system("manage-bde -status C: | findstr \"Fully Encrypted\" > nul 2>&1") == 0) {
@@ -94,7 +94,7 @@ int main() {
         cout << "[+] Downloaded: " << f.second << endl;
     }
 
-        ofstream setup("Z:\\full_arch_setup.sh");
+    ofstream setup("Z:\\full_arch_setup.sh");
     setup << "#!/bin/bash\n"
           << "set -e\n\n"
           << "echo \"=== Arch Linux installation started ===\"\n\n"
@@ -131,7 +131,7 @@ int main() {
     setup.close();
 
     cout << "\n[+] Preparation completed successfully.\n";
-    cout << "[*] Run deformator_final.bat as Administrator to finish EFI configuration.\n";
+    cout << "[*] Run stage2.bat as Administrator to finish EFI configuration.\n";
 
     return 0;
 }
