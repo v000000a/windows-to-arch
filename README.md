@@ -29,6 +29,6 @@ Use only if you fully understand the risks and have backups of important data.
   ```
 3. After completion run as Administrator: 
   ```cmd
-  deformator_final.bat
+  deformator_stage_2.bat
   ```
 4. Reboot and select "Arch Linux" in the boot menu.
