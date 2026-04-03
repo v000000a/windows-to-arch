@@ -1,34 +1,35 @@
-# Arch Deformator
+# windows-to-arch
 
-Experimental tool that allows installing a full Arch Linux system directly from a running Windows installation, followed by repurposing the original Windows partition.
+Experimental tool that allows installing a full Arch Linux system directly from a running Windows installation, followed by repurposing the original Windows partition into btrfs.
 
 ## Warning
 
-This software is highly experimental and carries significant risk.  
-It modifies the disk partition table, installs a new boot entry, and permanently removes the original Windows installation.
+This software is highly experimental and carries significant risk.
 
-Use only if you fully understand the risks and have backups of important data.
+It modifies the disk partition table, creates a new boot entry in the Windows Boot Manager, and permanently removes the original Windows installation.
+
+**Use only if you fully understand the risks and have backups of important data.**
 
 ## Requirements
 
-- Windows 10 / 11 (64-bit)
+- Windows 10 or 11 (64-bit)
 - Administrator privileges
-- BitLocker disabled on the system drive
-- Secure Boot strongly recommended to be disabled
-- At least 15 GB of free space on C:
+- BitLocker must be disabled on the system drive
+- Secure Boot is strongly recommended to be disabled in BIOS/UEFI
+- At least 15 GB of free space on the C: drive
 
 ## Build and Usage
 
-1. Compile:
+1. Compile the program:
    ```cmd
    g++ deformator.cpp -o deformator.exe
    ```
-2. Run as Administrator: 
-  ```cmd
-  deformator.exe
-  ```
-3. After completion run as Administrator: 
-  ```cmd
-  stage_2.bat
-  ```
-4. Reboot and select "Arch Linux" in the boot menu.
+2. Run as administrator:
+   ```cmd
+   deformator.exe
+   ```
+3. After the program finishes, run as administrator:
+   ```cmd
+   stage_2.bat
+   ```
+4. Reboot, enter boot menu and select "Arch Linux"
