@@ -94,7 +94,7 @@ int main() {
         cout << "[+] Downloaded: " << f.second << endl;
     }
 
-    ofstream setup("Z:\\full_arch_setup.sh");
+        ofstream setup("Z:\\full_arch_setup.sh");
     setup << "#!/bin/bash\n"
           << "set -e\n\n"
           << "echo \"=== Arch Linux installation started ===\"\n\n"
@@ -118,13 +118,14 @@ int main() {
           << "  echo 'LANG=en_US.UTF-8' > /etc/locale.conf\n"
           << "  systemctl enable NetworkManager\n"
           << "CHROOT\n\n"
-          << "# Warning: Windows partition will NOT be automatically destroyed\n"
           << "echo \"=== Installation completed successfully ===\"\n"
-          << "echo \"You are now in a minimal Arch Linux environment.\"\n"
+          << "echo \"You are now booted into a minimal Arch Linux system.\"\n"
           << "echo \"\"\n"
-          << "echo \"To repurpose the old Windows partition manually, you can run:\"\n"
-          << "echo \"  mkfs.btrfs -f -L windows_data /dev/sdX   (replace /dev/sdX with the old Windows partition)\"\n"
+          << "echo \"The original Windows partition was NOT automatically destroyed.\"\n"
+          << "echo \"If you want to repurpose it later, you can do it manually with:\"\n"
+          << "echo \"  mkfs.btrfs -f -L windows_data /dev/sdX\"\n"
           << "echo \"  btrfs device add /dev/sdX /\"\n"
+          << "echo \"(replace /dev/sdX with the actual old Windows partition)\"\n"
           << "echo \"\"\n"
           << "echo \"Reboot with: reboot\"\n";
     setup.close();
