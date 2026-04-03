@@ -1,5 +1,5 @@
 @echo off
-echo === Arch Deformator v6.3 - Final Step ===
+echo === arch-to-windows v6.3 - Final Step ===
 echo.
 
 echo Searching for EFI System Partition...
