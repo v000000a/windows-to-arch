@@ -24,6 +24,10 @@ It modifies the disk partition table, creates a new boot entry in the Windows Bo
    ```cmd
    g++ stage1.cpp -o stage1.exe
    ```
+   or you may compile the program statically:
+   ```cmd
+   g++ -static -static-libgcc -static-libstdc++ stage1.cpp -o stage1.exe
+   ```
 2. Run as administrator:
    ```cmd
    stage1.exe
